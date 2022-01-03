@@ -241,7 +241,7 @@
   cursor: pointer;
   transition: 0.1s;
 }
-.add-btn.del {
+.add-btn.active {
   transform: rotate(45deg);
 }
 
@@ -259,8 +259,13 @@
   align-items: center;
   position: absolute;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.3s ease-in-out;
+  display: none;
 }
+.team-card.active .sosmed-btn {
+  display: flex;
+}
+
 .team-card .sosmed-btn:hover {
   background: #ce8d00;
 }
