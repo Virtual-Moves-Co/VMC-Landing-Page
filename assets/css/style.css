@@ -8,15 +8,33 @@
 .jumbo-wrapper {
   width: 100%;
   height: 100vh;
-  background: url(https://s3-alpha-sig.figma.com/img/989a/ea33/f6996d70a4b5ff46cc7261755899fd95?Expires=1641168000&Signature=Hu88~lN3AcbkGdUIYD7qcqLBQmQFDtm0eAbn~spsmp2-OYcEi4a4bQ6AvHABJtd60NDFvEltf5ib7t2che05m5Adlf9vgbj36Rr-f3BBU77uGuLnKh0VLt3oWHRKh3CK71FUP5r7P4KAczl6pz5okGPvTN6OIeg8EtUYmPLLPoRcYq78-Kgodx5EI~AvcN5q598vUhhdfPlB-lYnvUGt7H1YviiehytqL~5s1WX-rxjPdBZkFSRhn0GZH7q~30oIglEnB9pHxok-HHtZWLYaAIbjve5Z8QAsOZ-z0mIZJd1-wb40UyL989Kg8RRZlfu1FK4e9vK-WltcQkUlPQKjNQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+  background: url(../img/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -200px;
+  /* background-position-y: -200px; */
+  position: relative;
+  overflow-x: hidden;
 }
 .jumbo {
   width: 100%;
   height: 100%;
   backdrop-filter: brightness(40%);
+}
+
+.banner-navigation {
+  position: absolute;
+}
+.banner-btn {
+  width: 2px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.466);
+  margin: 20px 0;
+  position: relative;
+  left: 90vw;
+  top: 50vh;
+  transform: translateY(-25vh);
+  z-index: 999;
+  cursor: pointer;
 }
 
 .header {
@@ -132,7 +150,7 @@
 .about-wrapper .box .img-box {
   width: 517px;
   height: 674px;
-  background: url(https://s3-alpha-sig.figma.com/img/7a75/5f30/442bacf95a8de2e81f5a02d05c197bb3?Expires=1641168000&Signature=Qax9XUoJOr3aKtqwERCI2QiKYtXqbfeYq7QQFOo2iidIDjhtM846NvUgQf6QVfeDi-vYJZEi1M8HoWvobAXSUbTT1b4V5RBfckpiUYcnWnesx~e0PqieFoVPfMbX2jS0Qlzvu-xF0VWE1OdEp5jWrMYDJRVcVVVNud-Yam-3BjnJVUEY-Km-o37VkKyBC1g7XBGH1uXOkqraHt7XVR4mwkKimv6eVcTPwsI9YdNIU9HBwRLFN-4JzXIdTgzldSJwwmPc4idPi2WBLjDcFDprMVDoEWCtHojWX6ffHOWNFKOy4WCqXy12Sk91dEojzgJH0O5dooURABbPQASddtXtOQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+  background: url(../img/about-img.png);
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1;
@@ -154,6 +172,111 @@
   font-weight: 100px;
   letter-spacing: 0.1em;
 }
+
+.our-team {
+  font-family: "Inter", sans-serif;
+  /* width: 500px;
+  height: 500px; */
+  margin: 100px 0;
+  padding: 0 100px;
+}
+.team-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.our-team .title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 50px 0;
+}
+
+.our-team .team-img {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  background: rgb(121, 120, 120);
+  position: relative;
+}
+.our-team .team-card p {
+  text-align: center;
+}
+.team-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
+  color: #000000;
+  margin-top: 10px;
+}
+.team-position {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: #000000;
+}
+
+.team-card {
+  position: relative;
+}
+
+.team-card .add-btn {
+  width: 100px;
+  height: 100px;
+  background: #ffb000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 50px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.add-btn.del {
+  transform: rotate(45deg);
+}
+
+.team-card .sosmed-btn {
+  width: 70px;
+  height: 70px;
+  background: #ffb000;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+}
+.sosmed-btn.linkedin {
+  right: -5%;
+  bottom: 26%;
+}
+.sosmed-btn.instagram {
+  right: -10%;
+  bottom: 45%;
+}
+.sosmed-btn.github {
+  right: -5%;
+  bottom: 65%;
+}
+
+.team-navigation {
+  list-style: none;
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+  justify-content: center;
+}
+.team-navigation li {
+  width: 100px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.123);
+  margin: 0 10px;
+}
+
 .line {
   width: 100%;
   padding: 0 200px;
