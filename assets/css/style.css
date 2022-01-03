@@ -198,6 +198,7 @@
   height: 400px;
   background: rgb(121, 120, 120);
   position: relative;
+  background-repeat: no-repeat;
 }
 .our-team .team-card p {
   text-align: center;
