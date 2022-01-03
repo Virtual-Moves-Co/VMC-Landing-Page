@@ -260,10 +260,14 @@
   position: absolute;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  display: none;
+  /* z-index: -99; */
+  opacity: 0;
+  visibility: hidden;
 }
 .team-card.active .sosmed-btn {
-  display: flex;
+  /* z-index: 9999; */
+  opacity: 1;
+  visibility: visible;
 }
 
 .team-card .sosmed-btn:hover {
