@@ -5,7 +5,3 @@ showBtn.forEach((e)=>{
         this.parentElement.parentElement.classList.toggle('active')
     })
 })
-
-function showTeamContact(){
-
-}
