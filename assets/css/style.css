@@ -63,6 +63,10 @@
   letter-spacing: 0.4em;
   text-decoration: none;
   color: #ffffff;
+  transition: 0.1s;
+}
+.header ul li a:hover {
+  color: #ffaf00;
 }
 .header ul li:first-child a {
   color: #ffb000;
@@ -235,9 +239,14 @@
   right: 0;
   bottom: 0;
   cursor: pointer;
+  transition: 0.1s;
 }
 .add-btn.del {
   transform: rotate(45deg);
+}
+
+.team-card .add-btn:hover {
+  background: #ce8d00;
 }
 
 .team-card .sosmed-btn {
@@ -250,6 +259,10 @@
   align-items: center;
   position: absolute;
   cursor: pointer;
+  transition: 0.1s;
+}
+.team-card .sosmed-btn:hover {
+  background: #ce8d00;
 }
 .sosmed-btn.linkedin {
   right: -5%;
@@ -294,6 +307,7 @@
   padding: 0 100px;
   margin-top: 80px;
 }
+
 .latest-news .title {
   font-size: 30px;
   font-weight: 700;
@@ -310,14 +324,27 @@
   flex-direction: column;
   width: 500px;
   font-family: "Inter", sans-serif;
-  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.news-card:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.164);
+}
+
+.news-card .news-desc-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .news-card .img-box {
   width: 100%;
   height: 500px;
-  background: url(../img/1.png);
   background-repeat: no-repeat;
 }
 .news-card h3 {
@@ -345,8 +372,16 @@
   align-items: center;
   margin: 10px 0;
 }
+.contact ul li a {
+  color: rgba(0, 0, 0, 0.562);
+  text-decoration: none;
+}
+.contact ul li a:hover {
+  color: #ffaf00;
+}
 .contact img {
   margin-right: 10px;
+  width: 40px;
 }
 .terms {
   padding: 0 100px;
@@ -358,6 +393,10 @@
   color: #20202075;
   font-size: 20px;
   margin-right: 20px;
+  transition: 0.2s;
+}
+.terms a:hover {
+  color: #ffb000;
 }
 .footer {
   font-family: "Inter", sans-serif;
