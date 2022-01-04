@@ -6,30 +6,6 @@ showBtn.forEach((e) => {
   });
 });
 
-// let count = 1
-
-// const radioBtn = document.querySelectorAll('.radio-btn')
-// function colorBtn(params){
-//     radioBtn.forEach((e, i) =>{
-
-//         if (e.checked) {
-//             bannerBtn[i].style.backgroundColor = '#ffb000'
-//         }
-//         // bannerBtn.forEach((e,i)=>{
-//         //     e.style.backgroundColor = 'white'
-//         // })
-
-//     })
-
-// }
-// colorBtn()
-
-// function changeBanner(){
-//     document.querySelector('.jumbo-wrapper').style.backgroundPositionY = '1000px'
-//     document.querySelector('.jumbo-wrapper').style.backgroundImage = 'url(assets/img/banner.png)'
-//     document.querySelector('.jumbo-wrapper').style.backgroundPositionY = '-1000px'
-// }
-
 const bannerSlider = () => {
   document.getElementById("radio" + counter).checked = true;
   counter++;
