@@ -10,12 +10,38 @@
   <body>
     <div class="main-wrapper">
       <div class="jumbo-wrapper">
-        <ul class="banner-navigation">
-          <li class="banner-btn"></li>
-          <li class="banner-btn"></li>
-          <li class="banner-btn"></li>
-          <li class="banner-btn"></li>
-        </ul>
+        <div class="slides">
+          <input
+            type="radio"
+            class="radio-btn"
+            name="radio"
+            id="radio1"
+            checked
+          />
+          <input type="radio" class="radio-btn" name="radio" id="radio2" />
+          <input type="radio" class="radio-btn" name="radio" id="radio3" />
+          <input type="radio" class="radio-btn" name="radio" id="radio4" />
+
+          <div class="slide first">
+            <img class="banner" src="/assets/img/banner.png" alt="" />
+          </div>
+          <div class="slide">
+            <img class="banner" src="/assets/img/banner.png" alt="" />
+          </div>
+          <div class="slide">
+            <img class="banner" src="/assets/img/banner.png" alt="" />
+          </div>
+          <div class="slide">
+            <img class="banner" src="/assets/img/banner.png" alt="" />
+          </div>
+          <div class="jumbo-btn">
+            <label for="radio1" id="btn1" class="banner-btn"></label>
+            <label for="radio2" id="btn2" class="banner-btn"></label>
+            <label for="radio3" id="btn3" class="banner-btn"></label>
+            <label for="radio4" id="btn4" class="banner-btn"></label>
+          </div>
+        </div>
+
         <div class="jumbo">
           <div class="header">
             <div class="logo">
