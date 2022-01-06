@@ -15,7 +15,7 @@ const bannerSlider = () => {
 };
 
 let counter = 1;
-setInterval(bannerSlider, 4000);
+// setInterval(bannerSlider, 4000);
 
 const bannerBtn = document.querySelectorAll(".banner-btn");
 
@@ -25,53 +25,24 @@ bannerBtn.forEach((e, i) => {
   });
 });
 
-let teamMargin = 0;
-let teamView = 0;
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
 
-const prevBtn = document.querySelector(".btn.prev");
-const nextBtn = document.querySelector(".btn.next");
-const teamContent = document.querySelectorAll(".team-content");
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-teamContent.forEach(() => {
-  const teamStrip = document.createElement("LI");
-  const teamNavigation = document.querySelector(".team-navigation");
-  teamNavigation.insertBefore(teamStrip, nextBtn);
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });
-prevBtn.addEventListener("click", () => {
-  teamPrev();
-});
-nextBtn.addEventListener("click", () => {
-  teamNext();
-});
-
-const teamNext = () => {
-  if (teamMargin !== -(teamContent.length * 100 - 100)) {
-    teamMargin -= 100;
-  } else {
-    teamMargin = 0;
-  }
-  teamContent[0].style.marginLeft = `${teamMargin}%`;
-  coloringStrip(-teamMargin / 100);
-};
-
-const teamPrev = () => {
-  if (teamMargin < 0) {
-    teamMargin += 100;
-  }
-  teamContent[0].style.marginLeft = `${teamMargin}%`;
-  coloringStrip(-teamMargin / 100);
-};
-
-setInterval(() => {
-  teamNext();
-  coloringStrip(-teamMargin / 100);
-}, 20000);
-
-const teamStrip = document.querySelectorAll(".team-navigation li");
-const coloringStrip = (i) => {
-  teamStrip.forEach((e) => (e.style.backgroundColor = "rgba(0, 0, 0, 0.123)"));
-
-  teamStrip[i].style.backgroundColor = "#ffb000";
-};
-
-coloringStrip(0);
